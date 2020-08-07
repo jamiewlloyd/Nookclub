@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, 
+abbr, acronym, address, big, cite, code,del, dfn, 
+em, img, ins, kbd, q, s, samp,small, strike, 
+strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, 
+ol, ul, li,fieldset, form, label, legend,table, 
+caption, tbody, tfoot, thead, tr, th, td,article, 
+aside, canvas, details, embed,figure, figcaption, 
+footer, header, hgroup, menu, nav, 
+output, ruby, section, summary,time, mark, 
+audio, video { 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	font-size: 100%; 
+	font: inherit; 
+	vertical-align: baseline;
+	font-family: tahoma;
+}
+
+header {
+	background-color: #20a152;
+	padding: 15px 0px;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1;
+}
+
+header h1 {
+	color: white;
+	font-size: 30px;
+	border: 6px solid white;
+	padding: 5px 12px;
+	display: inline-block;
+	border-radius: 40px;
+	margin-top: -3px;
+}
+
+.banner {
+	position: relative;
+	padding-top:80px;
+}
+
+.banner img {
+	max-width:100%;
+	margin-bottom: -5px;
+}
+
+.banner .welcome {
+	color: white;
+	background-color: #4b4b4b;
+	padding: 20px;
+	position: absolute;
+	left: 0px;
+	top: 30%;
+}
+
+.banner h2 {
+	font-size: 74px;
+}
+.banner h2 span {
+	font-size: 1.3em;
+}
+
+nav {
+	background-color: #e7e7e7;
+	padding: 20px;
+	position: sticky;
+	top:78px;
+	z-index: 2;
+}
+
+nav ul {
+	white-space: nowrap;
+	max-width: 1200px;
+	text-align: center;
+}
+
+nav li {
+	width: 25%;
+	display: inline-block;
+}
+
+nav li a {
+	text-decoration: none;
+	color: #4b4b4b;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+nav li a.join {
+	color: #20a152;
+}
+
+main {
+	max-width: 100%;
+	width: 1200px;
+	margin: 50px auto;
+	padding: 0 40px;
+	box-sizing: border-box;
+}
+
+article h2 {
+	color: #20a152;
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+article p {
+	line-height: 1.3em;
+	color: #696969;
+}
+
+.images {
+	text-align: center;
+	margin: 40px 0;
+}
+
+.images li {
+	display: inline-block;
+	width: 44%;
+	margin: 0 2.4%;
+}
+
+.images li img {
+	width: 100%;
+}
+
+.jointoday {
+	background: #f4f4f4;
+	text-align: center;
+	padding: 60px 20px;
+	color:#4b4b4b;
+}
+
+.jointoday h2 {
+	font-size: 32px;
+	padding-bottom: 20px;
+	font-weight: 800;
+	color: #20a152;
+}
+.jointoday input {
+	margin: 20px 0px;
+	padding: 10px 20px;
+	font-size: 20px;
+	border-radius: 28px;
+	border: 2px solid white;
+}
+
+footer {
+	background: #20a152;
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+/* pseudo classes */
+
+nav li a:hover {
+	text-decoration: underline;
+}
+
+.images li:hover {
+	position: relative;
+	top: -2px;
+}
+
+.jointoday input:focus {
+	border: 2px dashed #4b4b4b;
+	outline: none;
+}
+
+.jointoday input:valid {
+	border:  2px solid #20a152;
+}
+
+p::selection {
+	background-color: #20a152;
+	color: white;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1000px) {
+	.banner .welcome h2{
+		font-size: 60px;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.banner .welcome h2{
+		font-size: 45px;
+	}
+	article h2 {
+		font-size: 38px;
+	}
+}
+
+@media screen and (max-width:700px) {
+	.banner .welcome h2{
+		text-align: center;
+		font-size: 35px;
+	}
+	.banner h2 span {
+		font-size: 1em;
+	}
+	.banner .welcome {
+		position: relative;
+	}
+	article h2 {
+		font-size: 30px;
+	}
+
+	.banner .welcome h2 br {
+		display:none;
+	}
+	nav li a {
+		font-size: 14px;
+		font-weight: 650;
+	}
+	main {
+		margin: 30px 0px;
+	}
+	.images li {
+		width: 100%;
+		margin: 20px auto;
+		display: block;
+	}
+
+	.jointoday {
+		padding: 30px 20px;
+	}
+
+	header h1 {
+		font-size: 20px;
+		border: 4px solid white;
+		margin: 3px;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+	.banner .welcome h2{
+		font-size: 20px;
+	}
+
+	article h2 {
+		font-size: 25px;
+	}
+	nav li a {
+		font-size: 12px;
+		font-weight: 650;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	nav li a {
+		font-size: 10px;
+		font-weight: 600;
+	}
+	
+}
+
