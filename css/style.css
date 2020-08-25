@@ -78,6 +78,7 @@ nav {
 
 nav ul {
 	white-space: nowrap;
+	margin: 0 auto;
 	max-width: 1200px;
 	text-align: center;
 }
